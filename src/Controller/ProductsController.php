@@ -25,7 +25,8 @@ class ProductsController extends AbstractController
 
     #[Route('/products/{id}/lowest-price', name: 'lowest-price', methods: 'POST')]
     public function lowestPrice(
-        Request                   $request, int $id,
+        Request                   $request,
+        int                       $id,
         DTOSerializer             $serializer,
         PromotionsFilterInterface $promotionsFilter,
     ): Response
